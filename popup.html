@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>ChatGPT Extension</title>
+</head>
+
+<body>
+	<div class="typewriter">
+		<h1>MailMind</h1>
+	</div>
+	<span id="gmailSignIn">Sign-in to Gmail</span>
+	<div class="form-container">
+		<form>
+			<label for="inputText">Enter additional information:
+				<span class="fas fa-question-circle" id="questionMark">
+					<span class="tooltip-text"> i.e. the response should sound professional, I was late because... </span>
+				</span>
+			</label>
+			<textarea id="inputText" name="inputText"></textarea>
+			<div id="dropdownContainer">
+				<select id="dropDownMenu">
+					<option value="" disabled selected>Refresh Emails</option>
+				</select>
+				<span class="fa fa-refresh" id="getEmailsBtn">
+					<span class="tooltip-text"> Refresh Emails </span>
+				</span>
+			</div>
+			<br>
+			<div style="display: flex;">
+				<button type="button" id="generateBtn">Generate</button>
+				<button type="button" id="summaryBtn">Summarise</button>
+			</div>
+			<br>
+		</form>
+	</div>
+	<div id="outputTextContainer">
+		<textarea id="outputText" name="outputText" readonly></textarea>
+		<span class="fas fa-copy" id="copyBtn"></span>
+		<label class="switch" id="switchBtn">
+			<input type="checkbox" id="checkboxBtn">
+			<span class="slider round" id="sliderRound">
+				<span class="tooltip-text"> Response uses your writing style </span>
+			</span>
+		</label>
+	</div>
+
+</body>
+<script src="popup.js"> </script>
+<script src="background.js"> </script>
+
+</html>

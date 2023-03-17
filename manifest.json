@@ -1,0 +1,26 @@
+{
+    "name": "MailMind",
+    "description": "AI email Assistant",
+    "version": "0.0.4",
+    "manifest_version": 3,
+    "icons": {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "options_page": "options.html",
+    "permissions": [
+        "identity"
+    ],
+    "oauth2": {
+        "client_id": "959578490029-tb9iaie3q8dkljs5ej1l2s01vn1mo902.apps.googleusercontent.com",
+        "scopes": [
+          "https://www.googleapis.com/auth/gmail.readonly"]
+    }
+}
